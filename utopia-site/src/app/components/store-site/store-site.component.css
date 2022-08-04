@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Roboto&display=swap');
+.tee-image {
+    height: 85%;
+    margin-bottom: 0px;
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+div {
+    border: 0px solid red;
+}
+
+.tee-column {
+    max-height: 50vh;
+    padding: auto;
+}
+
+.tee-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 2px 2px purple;
+}
+.tee-image:hover {
+    filter: drop-shadow(5px 5px 5px purple);
+}
