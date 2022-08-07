@@ -7,6 +7,7 @@ import { HomeSiteComponent } from './components/home-site/home-site.component';
 import { StoreSiteComponent } from './components/store-site/store-site.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { StoreItemComponent } from './components/store-site/store-item/store-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StoreItemComponent } from './components/store-site/store-item/store-ite
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

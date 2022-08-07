@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: rgba(255, 255, 255, 0.781);
+    background-image: url("https://c.tenor.com/K1tltRr6dj4AAAAd/grand-theft-auto-grand-theft-auto-v.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }

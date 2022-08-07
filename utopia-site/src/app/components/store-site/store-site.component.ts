@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ChildActivationStart, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-store-site',
@@ -8,35 +9,16 @@ import { Router } from '@angular/router';
 })
 export class StoreSiteComponent implements OnInit {
 
-  asortyment = 
+  public asortyment: any = 
     [
-      {
-        id: 0,
-        name: "tee1",
-        url: "https://cdn.discordapp.com/attachments/971683092756566029/1004408810745647265/koszulka26.png"
-      },
-      {
-        id: 1,
-        name: "tee2",
-        url: "https://cdn.discordapp.com/attachments/971683092756566029/1004408791762219149/koszulka24.png"
-      },
-      {
-        id: 2,
-        name: "tee3",
-        url: "https://cdn.discordapp.com/attachments/971683092756566029/1004408747713638530/koszulka22.png"
-      },
-      {
-        id:3,
-        name:"tee4",
-        url:"https://cdn.discordapp.com/attachments/971683092756566029/971769968964300850/koszulka13.png"
-      }
+    
     ];
     
     rowCount: number;
     teeCount: number;
     
 
-  constructor(private router: Router) { 
+  constructor(private router: Router, private http: HttpClient) { 
 
     this.rowCount = Math.ceil(this.asortyment.length/3);
     this.teeCount = this.asortyment.length;
@@ -44,10 +26,20 @@ export class StoreSiteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.fetchPosts()
+    
   }
 
   routerRedirect(id: number) {
     this.router.navigate(['/store/item/', id]);
+  }
+
+  private fetchPosts() {
+    this.http.get('https://utopiasite-3aaca-default-rtdb.europe-west1.firebasedatabase.app/storage/-N8qAtozOopVOlHNgb7W.json').subscribe(posts => {
+      this.asortyment = posts;
+      console.log(this.asortyment);
+      console.log(posts);
+    });
   }
 
 }
