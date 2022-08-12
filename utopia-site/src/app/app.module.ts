@@ -9,6 +9,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { StoreItemComponent } from './components/store-site/store-item/store-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { AdminProductsComponent } from './components/admin-panel/admin-products/admin-products.component';
+import { AdminOverviewComponent } from './components/admin-panel/admin-overview/admin-overview.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
     StoreSiteComponent,
     NavbarComponent,
     StoreItemComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    AdminProductsComponent,
+    AdminOverviewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

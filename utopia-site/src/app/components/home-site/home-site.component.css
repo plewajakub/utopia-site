@@ -1,18 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Roboto&display=swap');
+@import url(//db.onlinewebfonts.com/c/759573e11a5e10f3e75b30c7a37d02a3?family=Old+London);
 .menuImg {
     float: right;
     height: 100%;
 }
 
+
 .home-link {
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Old London";
     font-weight:900;
     text-decoration: none;
     color: black;
     font-size: 2rem;
-    text-shadow: 2px 2px purple;
+
 }
 li {
     list-style: none;
@@ -23,8 +25,8 @@ li {
 }
 
 .title-sidebar {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Old London";
     font-weight: 900;
-    text-shadow: 2px 2px rgb(189, 0, 189);
+    color: black;
 
 }

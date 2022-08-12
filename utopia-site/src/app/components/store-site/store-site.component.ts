@@ -14,7 +14,8 @@ export class StoreSiteComponent implements OnInit {
   constructor(private router: Router, private http: HttpClient, private connection:ConnectionService) { 
 
     this.connection.fetchItems().subscribe(items => {
-      this.asortyment = items;
+      this.asortyment = Object.values(items);
+      console.log(this.asortyment);
     });
   }
 

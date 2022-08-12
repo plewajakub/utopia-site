@@ -1,1 +1,20 @@
-<p>admin-panel works!</p>
+<div class="a-panel-wrapper">
+    <div class="container panel-body">
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="products">Products</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>
+
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ConnectionService } from 'src/app/services/connection.service';
 
 @Component({
   selector: 'app-store-item',
@@ -12,15 +13,15 @@ export class StoreItemComponent implements OnInit {
 
     id: number;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) { 
+  constructor(private route: ActivatedRoute, private connection: ConnectionService) { 
     this.id = this.route.snapshot.params['id'];
     
   }
 
   ngOnInit(): void {
 
-    this.http.get('https://utopiasite-3aaca-default-rtdb.europe-west1.firebasedatabase.app/storage/-N8qAtozOopVOlHNgb7W.json').subscribe(posts => {
-      this.asortyment = posts;
+    this.connection.fetchItems().subscribe(posts => {
+      this.asortyment = Object.values(posts);
     });
     
   }

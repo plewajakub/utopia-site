@@ -1,0 +1,42 @@
+<!-- if not adding new product -->
+<div class="row" *ngIf="!isAdding">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">URL</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products; let i = index;">
+                <th scope="row">{{i}}</th>
+                <td>{{product.name}}</td>
+                <td>{{product.url}}</td>
+                <td>{{product.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="isAdding = true;" class="d-grid col-2 btn btn-primary">Add new product</button>
+</div>
+
+<!-- if adding new product -->
+
+<div *ngIf="isAdding" class="row">
+    <form class="my-2" (ngSubmit)="onSubmit(productForm)" #productForm="ngForm">
+        <div class="mb-3 col-2">
+            <label class="form-label">tshirt name</label>
+            <input type="text" class="form-control" ngModel name="name"> 
+        </div>
+        <div class="mb-3 col-2">
+            <label class="form-label">tshirt url</label>
+            <input type="text" class="form-control" ngModel name="url">
+        </div>
+        <div class="mb-3 col-2">
+            <label class="form-label">tshirt price</label>
+            <input type="text" class="form-control" ngModel name="price">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -4,12 +4,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ConnectionService {
+
   constructor(private http: HttpClient) { 
   }
 
   fetchItems() {
-    return this.http.get('https://utopiasite-3aaca-default-rtdb.europe-west1.firebasedatabase.app/storage/-N8qAtozOopVOlHNgb7W.json')
+    return this.http.get('https://utopiasite-3aaca-default-rtdb.europe-west1.firebasedatabase.app/storage/-N8qAtozOopVOlHNgb7W/asortyment.json')
   }
 
-  
+  pushItems(Item: any) {
+    return this.http.post('https://utopiasite-3aaca-default-rtdb.europe-west1.firebasedatabase.app/storage/-N8qAtozOopVOlHNgb7W/asortyment.json', Item)
+  }
+
+
 }

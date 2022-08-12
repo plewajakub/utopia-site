@@ -1,8 +1,7 @@
+<app-navbar></app-navbar>
 <div class="row">
-    <div class="col-12"><img style="max-height: 25vh;" class="img-fluid d-block mx-auto" src="https://media.discordapp.net/attachments/580507346451562535/1004515359870697623/logoblack.png"></div>
-    <a routerLink="">back</a>
-    <div *ngFor="let tee of asortyment.asortyment" class="col-12 col-sm-6 tee-column">
-            <img class="tee-image img-fluid d-block mx-auto" (click)="routerRedirect(tee.id)" src={{tee.url}}>
+    <div *ngFor="let tee of asortyment; let i = index" class="col-12 col-sm-6 tee-column">
+            <img class="tee-image img-fluid d-block mx-auto" (click)="routerRedirect(i)" src={{tee.url}}>
             <div class="tee-label"><span>{{tee.name}}</span>
     </div>
 </div>

@@ -1,12 +1,35 @@
-<a routerLink="">back</a>
+<app-navbar></app-navbar>
 <div class="row">
     <div class="col-md col-sm-12">
-        <img class="img-fluid item-img" src={{asortyment.asortyment[id].url}}>
+        <img class="img-fluid item-img" src={{asortyment[id].url}}>
     </div>
-
     <div class="col-md col-sm-12">
-        <h1>{{asortyment.asortyment[id].name}}</h1>
+        <h1>{{asortyment[id].name}}</h1>
+        <div class="description">
         <hr>
-        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint facere officia voluptates voluptate ullam, quam magni similique velit corrupti doloremque provident sunt itaque rem ex culpa qui alias, vitae debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, eius ratione tempora placeat aperiam ipsam culpa, incidunt excepturi unde blanditiis corporis possimus quod dolorem quae rem dolorum qui vero! Debitis.</span>
+        <form>
+            <div class="row">
+                <div class="col">
+                    <h2 class="price">{{asortyment[id].price}} PLN</h2>
+                </div>
+                <div class="col">
+                    <select class="form-select size-select float-end" aria-label="Default select example">
+                        <option selected disabled>Rozmiar</option>
+                        <option disabled value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+            </div>
+            
+        </form>
+        <hr>
+            Czarny t-shirt z nadrukiem, krój heavy oversize.<br>
+            WYPRODUKOWANO W POLSCE, 100% BAWEŁNA (240G/M2).<br>
+            PREORDER - wysyłka do 3 tygodni od zakończenia preorderu.<br>
+            Preorder kończy się DD/MM/RRRR.<br>
+            Wymiary podane w tabeli mogą różnić się od rzeczywistych do 3 cm.
+        </div>
     </div>
 </div>

@@ -1,18 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800;900&family=Roboto&display=swap');
+@import url(//db.onlinewebfonts.com/c/759573e11a5e10f3e75b30c7a37d02a3?family=Old+London);
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 4rem
+    font-family: 'Old London';
+    font-weight: 900;
+    color: #c52b2b;
+    text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 5rem
 }
 
-span {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    text-shadow: 1px 1px purple;
+hr {
+    border-color: #c52b2b;
+}
+
+.description {
+    font-family: 'Old London';
+    color: white;
+    font-size: 1.3rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .item-img {
     height: 60vh;
 }
 div {
     padding: none;
+}
+.size-select {
+    font-size: 1.5rem;
+}
+
+.price {
+    font-size: 3rem;
 }
