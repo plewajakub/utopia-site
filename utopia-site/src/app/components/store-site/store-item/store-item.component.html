@@ -15,10 +15,10 @@
                 <div class="col">
                     <select class="form-select size-select float-end" aria-label="Default select example">
                         <option selected disabled>Rozmiar</option>
-                        <option disabled value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
+                        <option [disabled]="asortyment[id].S < 1" value="S">S</option>
+                        <option [disabled]="asortyment[id].M < 1" value="M">M</option>
+                        <option [disabled]="asortyment[id].L < 1" value="L">L</option>
+                        <option [disabled]="asortyment[id].XL < 1" value="XL">XL</option>
                     </select>
                 </div>
             </div>

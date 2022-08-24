@@ -24,6 +24,7 @@ export class AdminProductsComponent implements OnInit {
   onSubmit(form: NgForm) {
     this.connection.pushItems(form.value).subscribe(responseData => {
       console.log(responseData);
-    });
+      this.isAdding=false;
+    })
   }
 }

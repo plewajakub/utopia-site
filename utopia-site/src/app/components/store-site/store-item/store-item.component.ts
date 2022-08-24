@@ -22,6 +22,7 @@ export class StoreItemComponent implements OnInit {
 
     this.connection.fetchItems().subscribe(posts => {
       this.asortyment = Object.values(posts);
+      console.log(this.asortyment)
     });
     
   }

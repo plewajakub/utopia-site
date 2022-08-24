@@ -7,6 +7,10 @@
                 <th scope="col">Name</th>
                 <th scope="col">URL</th>
                 <th scope="col">Price</th>
+                <th scope="col">S</th>
+                <th scope="col">M</th>
+                <th scope="col">L</th>
+                <th scope="col">XL</th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +19,10 @@
                 <td>{{product.name}}</td>
                 <td>{{product.url}}</td>
                 <td>{{product.price}}</td>
+                <td>{{product.S}}</td>
+                <td>{{product.M}}</td>
+                <td>{{product.L}}</td>
+                <td>{{product.XL}}</td>
             </tr>
         </tbody>
     </table>
@@ -36,6 +44,22 @@
         <div class="mb-3 col-2">
             <label class="form-label">tshirt price</label>
             <input type="text" class="form-control" ngModel name="price">
+        </div>
+        <div class="mb-3 col-2">
+            <label class="form-label">S</label>
+            <input type="number" class="form-control" ngModel name="S">
+        </div>
+        <div class="mb-3 col-2">
+            <label class="form-label">M</label>
+            <input type="number" class="form-control" ngModel name="M">
+        </div>
+        <div class="mb-3 col-2">
+            <label class="form-label">L</label>
+            <input type="number" class="form-control" ngModel name="L">
+        </div>
+        <div class="mb-3 col-2">
+            <label class="form-label">XL</label>
+            <input type="number" class="form-control" ngModel name="XL">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
